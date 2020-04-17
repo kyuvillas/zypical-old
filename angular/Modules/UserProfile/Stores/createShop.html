@@ -1,0 +1,56 @@
+<md-dialog>
+<form name="addForm"  action="" layout="column" layout-align="start center" layout-padding>
+
+    <div>
+      <span class="md-title in-line">Create and Online Shop</span>
+      
+    </div>
+    <md-divider></md-divider>
+
+    <md-dialog-content style="max-width:800px;max-height:810px; ">
+                      
+            <md-input-container  hud-setter width-in-percent="90">
+              <label>Shop Name</label>
+              <input type="text" required ng-model="name" >
+              <div ng-messages="addForm.name.$error">
+                  <div ng-message="required">This is required!</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container hud-setter width-in-percent="90">
+              <label>Username</label>
+              <input type="text" required ng-model="username" ng-change="checkusername()">
+              <div ng-messages="addForm.username.$error">
+                <div ng-message="required">This is required!</div>
+              </div>
+              <div ng-show="taken">
+                <div ng-message="taken">This shop username is taken</div>
+              </div>
+            </md-input-container>
+
+            <md-input-container hud-setter width-in-percent="90">
+              <label>Category</label>
+              <md-select required ng-model="category" >
+                <!-- <md-option><em>None</em></md-option> -->
+                <md-option ng-repeat="rr in categories" >
+                  {{rr}}
+                </md-option>
+              </md-select>
+              <div ng-messages="addForm.category.$error">
+                  <div ng-message="required">This is required!</div>
+                </div>
+            </md-input-container>
+
+          </form>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row" >
+      <md-button   target="_blank" ng-click="closeDialog()" >
+        Cancel
+      </md-button>
+      <md-button ng-disabled="addForm.$valid==false" ng-click="submitForm()" type="submit" style="margin-right:20px;" md-autofocus >
+        Create
+      </md-button>
+    </md-dialog-actions>
+</form>
+</md-dialog>

@@ -1,0 +1,16 @@
+[
+	{	
+		"id":1,
+		"storename": "beauyish",
+		"storepic": "assets/images/placeholders/polo1.jpg",
+		"messages": 0,
+		"notifications": 2
+	},
+	{	
+		"id":2,
+		"storename": "lapoche",
+		"storepic": "assets/images/placeholders/lapoche.png",
+		"messages": 1,
+		"notifications": 15
+	}
+]

@@ -1,0 +1,75 @@
+<md-dialog style=" width: 70%; height: 85%;">
+    <div layout="row" layout-align="end center">
+
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <i  class="fa fa-close"/>
+        </md-button>
+    </div>
+    <md-dialog-content layout flex >
+        <div flex layout="column" style="background-color: whitesmoke">
+            <div flex layout="row" layout-align="center center">
+                
+                    <img layout-margin ng-src="{{preview}}"  style="height:78%; width:auto;overflow: hidden"/>
+            </div>
+            <div flex="20" layout-padding layout="row" layout-align="space-between start">
+                <div ng-repeat="img in imgs" style="padding:0"  layout>
+
+                    <a   ng-click='changepreview(img)' href="" class="pics">
+                    <img   ng-src="{{img}}" layout-margin style="height: 90;width: 90;object-fit: cover;overflow: hidden"/> 
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div layout="column"  flex="40">
+            <div flex="10" layout>
+                <div flex="20" layout layout-align="center center">
+                        <img  ng-src="{{product.storepic}}"  style="height:50px;width: 50px" class="img-circle" />
+                </div>
+                <div flex  >                    
+                    <b flex style="font-size:1em">{{product.storename}}</b>
+                    <div flex layout="row" >
+                        <span style="font-size: 0.9em; margin: 0.5% 1% 1% 0;" ng-repeat="d in product.delivery" class="badge">{{d}}</span>
+                    </div>
+                </div>
+            </div>
+            <div flex layout="column" layout-padding  >
+                <div flex="15"  layout="column">
+                    <div flex>
+                        <p style="font-size: 1.2em;">{{product.productname}}</p>
+                    </div>
+                    
+                    <div flex layout="row" layout-align="space-between center">
+                        <div  flex layout layout-align="start end">
+                            <b style="font-size: 1.9em;">P{{product.price}}</b>
+                        </div>
+                        <div flex layout="column" class="subhead" layout-align="center end"> 
+                            <span>{{product.saves}} people saved this</span>
+                            <span >{{product.views}} Views </span>
+                        </div>
+                    </div>
+                </div>
+                <div flex  >
+                    Description:
+                    {{product.productdesc}}
+                </div>
+                <div flex="10" layout >
+                    <md-button class="action-button" flex>Inquire Product</md-button>
+                    <md-button class="green-button" flex>Save Product</md-button>
+                </div>
+                
+            </div>
+
+        </div>
+    </md-dialog-content>
+
+</md-dialog>
+<style>
+    .active{
+        border:1px solid #01a982;
+    }
+    .pics:focus{
+        border:1px solid #01a982;
+
+    }
+</style>

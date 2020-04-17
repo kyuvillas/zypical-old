@@ -1,0 +1,42 @@
+[
+	{	
+		"id":1,
+		"storename": "beauyish",
+		"storepic": "assets/images/placeholders/polo1.jpg",
+		"saves": "53",
+		"products": "15",
+        "slot": "1"
+	},
+	{	
+		"id":2,
+		"storename": "styleph",
+		"storepic": "assets/images/placeholders/hat.jpg",
+		"saves": "21",
+		"products": "7",
+        "slot": "2"
+	},
+	{	
+		"id":3,
+		"storename": "lapoche",
+		"storepic": "assets/images/placeholders/lapoche.png",
+		"saves": "85",
+		"products": "49",
+        "slot": "3"
+	},
+	{	
+		"id":4,
+		"storename": "retrow",
+		"storepic": "assets/images/placeholders/yay.jpg",
+		"saves": "63",
+		"products": "115",
+        "slot": "4"
+	},
+	{	
+		"id":5,
+		"storename": "plainz",
+		"storepic": "assets/images/placeholders/me.jpg",
+		"saves": "35",
+		"products": "6",
+        "slot": "1"
+	}
+]

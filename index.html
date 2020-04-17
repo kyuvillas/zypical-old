@@ -1,0 +1,131 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <base href="http://localhost/zypical">  UNCOMMENT TO REMOVE HASHBANG (# IN URL)--> 
+  <!-- STYLES -->
+    
+    <!-- Plugin designs -->
+    <!-- GLYPHICONS -->
+    <!-- Animations -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!-- GLYPHICONS -->
+    <link rel="stylesheet" href="assets/css/glyphicon.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!-- dont make this cdn -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <!-- Jquery -->
+    <script src="assets/plugins/Jquery/jquery-2.2.1.js"></script>
+    <script src="assets/plugins/Jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/plugins/Jquery/jquery-ui.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
+
+    <!-- Angular Material style sheet -->
+    <!-- <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css"> -->
+    <link rel="stylesheet" href="assets/plugins/AngularMaterial/angular-material.min.css">
+    <link rel="stylesheet" href="assets/plugins/AngularMaterial/material.css">
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="assets/plugins/Angular/angular.min.js"></script>
+    <script src="assets/plugins/Angular/angular-animate.min.js"></script>
+    <script src="assets/plugins/Angular/angular-aria.min.js"></script>
+    <script src="assets/plugins/Angular/angular-messages.min.js"></script>
+    <script src="assets/plugins/Angular/uirouter.js"></script>
+    <script src="assets/plugins/AngularScroll/module.js"></script>                                  <!-- Angular Scroll -->
+    <script src="assets/plugins/AngularScroll/helpers.js"></script>                                 <!-- Angular Scroll -->
+    <script src="assets/plugins/AngularScroll/directives/scroll-container.js"></script>             <!-- Angular Scroll -->
+    <script src="assets/plugins/AngularScroll/directives/scrollspy.js"></script>                    <!-- Angular Scroll -->
+    <script src="assets/plugins/AngularScroll/directives/smooth-scroll.js"></script>                <!-- Angular Scroll -->
+    <script src="assets/plugins/AngularScroll/directives/spy-context.js"></script>                  <!-- Angular Scroll -->
+    <script src="assets/plugins/AngularScroll/services/request-animation.js"></script>              <!-- Angular Scroll -->
+    <script src="assets/plugins/AngularScroll/services/scroll-container-api.js"></script>           <!-- Angular Scroll -->
+    <script src="assets/plugins/AngularScroll/services/spy-api.js"></script>        
+    <script src="assets/plugins/slider.js"></script>                                                <!-- Angular slider -->
+
+    <!-- Angular Material Library -->
+    <script src="assets/plugins/AngularMaterial/angular-material.min.js"></script>
+
+    <!-- Scrollbar -->
+
+    <link rel="stylesheet" href="assets/plugins/Scrollbar/jquery.scrollbar.css">
+    <script src="assets/plugins/Scrollbar/jquery.scrollbar.min.js"></script>
+
+
+    <!-- customized style -->  
+    <link rel="stylesheet" href="assets/css/zy-style.css">
+    <!-- Your application bootstrap  -->
+    
+    <!-- Directives -->
+    <script type="text/javascript" src="angular/Shared/zyDirectives.js"></script>
+    <!-- Factories -->
+    <script type="text/javascript" src="angular/Shared/zyFactory.js"></script>
+    <!-- Router -->
+    <script type="text/javascript" src="angular/Shared/zyRouter.js"></script>
+    
+    <!-- Angular Social -->
+    <script type="text/javascript" src="assets/plugins/AngularSocial/angularjs-social-login.js"></script>
+    
+    <!-- Modules Controller-->
+    <!-- Home -->
+    <script type="text/javascript" src="angular/Modules/Home/home.js"></script>
+    <script type="text/javascript" src="angular/Modules/Home/homeController.js"></script>
+    <!-- Bazaar -->
+    <script type="text/javascript" src="angular/Modules/Bazaar/bazaar.js"></script>
+    <script type="text/javascript" src="angular/Modules/Bazaar/bazaarController.js"></script>
+    <!-- Search Controller -->
+    <script type="text/javascript" src="angular/Modules/Search/search.js"></script>
+    <script type="text/javascript" src="angular/Modules/Search/searchController.js"></script>
+    <!-- User Profile Controller -->
+    <script type="text/javascript" src="angular/Modules/UserProfile/userprofile.js"></script>
+    <script type="text/javascript" src="angular/Modules/UserProfile/userprofileController.js"></script>    
+    <script type="text/javascript" src="angular/Modules/UserProfile/Saves/savesController.js"></script>
+    <script type="text/javascript" src="angular/Modules/UserProfile/Personal/personalController.js"></script>
+    <script type="text/javascript" src="angular/Modules/UserProfile/Stores/storeController.js"></script>
+    <script type="text/javascript" src="angular/Modules/UserProfile/Messages/messagesController.js"></script>
+    <!-- Store Profile Controller -->
+    <script type="text/javascript" src="angular/Modules/StoreProfile/storeprofile.js"></script>
+    <script type="text/javascript" src="angular/Modules/StoreProfile/storeprofileController.js"></script>    
+
+    <!-- Main Application -->
+    <script type="text/javascript" src="angular/main.js"></script>
+
+<style>
+    .loadingstate{
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        background-color: rgba(0,0,0,0.2);
+    }
+</style>
+    
+</head>
+<body layout="column" layout-align="start stretch" ng-app="MainApplication" ng-controller="MainController as m" >
+  <!--  HTML content start  -->  
+    <div flex="none" layout="row" layout-align="start center" class="nav-bar" ng-hide="m.mainstate.current.name=='home' || m.mainstate.current.name=='bazaar'" ng-cloak>
+        <div flex="15" ></div>    
+        <img  src='assets/images/zypical-logo-black-green.png'/>
+        <div flex >
+            PUT SEARCH HERE
+        </div>
+        <div flex="15" class="test-g"></div>    
+    </div>
+
+<!--    <div flex layout class="scrollbar-macosx" data-jquery-scrollbar>-->
+    <div flex layout>
+<!--        <div ui-view layout="column" layout-align="start stretch" flex></div>-->
+        <div ui-view flex layout class="main-container"></div>
+        <div ng-show="loadingstate" class="loadingstate" layout layout-align="center center">
+            <md-progress-circular  ng-show="loadingstate"  md-diameter="70"></md-progress-circular>
+        </div>
+    </div>
+
+
+    <!--  HTML content end  -->  
+  
+</body>
+
+
+</html>

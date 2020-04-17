@@ -1,0 +1,42 @@
+<md-grid-list class="product-grid" md-cols-gt-sm="{{column}}" md-cols-sm="2"  md-cols-xs="1" md-row-height-gt-sm="{{ratiowidth}}:{{ratioheight}}" md-row-height-sm="2:3" md-gutter="1%" >
+    <md-grid-tile  ng-repeat="p in products">
+        <md-card layout="column" layout-align="start stretch">
+            <md-card-header flex="15"  >
+              <md-card-avatar layout="row" layout-align="center center"> 
+                <img ng-src="{{p.storepic}}"   class="img-circle" />
+              </md-card-avatar>
+              <md-card-header-text layout="column">
+                <a href="" class="blacklink" ng-click="ChangeState('storeprofile')"> <b flex style="font-size:0.9em">{{p.storename}}</b></a>
+                <div flex layout="row" >
+                    <span ng-repeat="d in p.delivery" class="badge">{{d}}</span>
+                </div>
+              </md-card-header-text>
+            <div layout="row" flex="10" layout-align="center center" ng-mouseover="hoverEdit = true" ng-mouseleave="hoverEdit = false">
+                <a href="" ng-click="deleteproduct($event)"><i class="fa fa-trash" ng-show="hoverEdit == true"></i></a>
+            </div>
+            </md-card-header>
+            <!-- <div flex="65" layout > -->
+                <a href="" style="text-decoration: none"  flex="65" layout  ng-click="showLogInDialog($event,p)">
+                    <img style="width: 100%; overflow: hidden;object-fit: cover;" ng-src="{{p.productpic}}"/> 
+                </a>                   
+            <!-- </div> -->
+            <md-card-title flex="20" layout="column" layout="start stretch" >
+                <div flex layout="row" layout-align="space-between stretch" >                            
+                    <span> {{p.productname | limitTo: 13}}{{p.productname.length > 13 ? '...' : ''}} </span>
+                    <b flex="25">₱ {{p.price}}</b>
+                </div>
+                <div flex layout="row" class="subhead" layout-align="space-between stretch">  
+                    <div>
+                        <a href="" style="text-decoration: none;">
+                            <b><i ng-if="!p.saved" class="fa fa-bookmark-o"></i></b>
+                            <i ng-if="p.saved" class="fa fa-bookmark"></i>
+                        </a>
+                        <span>{{p.saves}}</span>
+                    </div>
+                    <span >{{p.views}} Views </span>
+                </div>
+            </md-card-title>
+        </md-card>
+        
+    </md-grid-tile>
+</md-grid-list>

@@ -1,0 +1,316 @@
+body{
+    font-family: calibri light;
+    background-color: rgb(250,250,250);
+}
+.nav-bar{
+	height:	7%;
+	background-color: #fff;
+	border-bottom: 1px solid rgba(0,0,0,.0975);
+	color:#1d1d1d;
+}
+
+.main-container{
+    height: 100% !important;
+}
+.nav-bar md-input-container{
+	margin:2% 0 0 3%
+}
+.nav-bar img{
+	width: auto;
+	height: 100%;
+	margin-bottom: -1%;
+}
+
+.blacklink{
+    text-decoration: none;
+    color: black
+}
+/*HOME PAGE CUSTOM*/
+
+
+#upperPanel{
+    background-image: url("/zypical/assets/images/mainbg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;        
+}
+
+#upperPanel div md-input-container{
+    font-size:21px;
+}
+
+#upperPanel div md-input-container label{
+    color:white;
+    font-size:23px;
+}
+
+#upperPanel div md-input-container input{
+    color:white;
+    border-color:white;
+    font-size:23px;
+}
+
+#upperPanel div md-input-container md-select-value{
+    color: white;
+    border-color: white;
+}
+
+#popProducts{
+    border-radius:5px;
+    width:70%;
+    background-image: url(/zypical/assets/images/popularproducts2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    cursor:pointer;
+}
+
+#popProducts:hover{
+    opacity: 0.8;
+    transition: .2s ease-in-out;
+}
+
+#popProducts:hover > h2{
+    transition: .1s ease-in-out;
+    opacity: 1;
+    font-size:32px;
+}
+
+#popStores{
+    border-radius:5px;
+    width:70%;
+    background-image: url(/zypical/assets/images/popularstores2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    cursor:pointer;
+}
+
+#popStores:hover{
+    opacity: 0.8;
+    transition: .2s ease-in-out;
+}
+
+#popStores:hover > h2{
+    transition: .1s ease-in-out;
+    opacity: 1;
+    font-size: 32px;
+}
+
+#bazaar{
+    border-radius: 5px;
+    width:75%;
+    background-image: url(/zypical/assets/images/bazaar2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    cursor: pointer;
+}
+
+#bazaar:hover{
+    opacity: 0.7;
+    transition: .2s ease-in-out;
+}
+
+#bazaar:hover > h2{
+    transition: .1s ease-in-out;
+    opacity: 1;
+    font-size: 32px;
+}
+
+.circleIndicator{
+    background-color:gray; 
+    border-radius:20px; 
+    width:8px; 
+    height:8px; 
+    margin-bottom:9px;
+    transition: 0.1s ease-in-out;
+    border:solid;
+    border-width:1px;
+    border-color:gray;
+    cursor:pointer;
+}
+
+.circleIndicator.active{
+    background-color: white;
+    width:13px;
+    height:13px;
+    transition: 0.1s ease-in-out;
+}
+
+.zypicalButton{
+    border:solid;
+    border-color:gray;
+    border-width:1px;
+    color:gray;
+}
+
+.zypicalButton:hover{
+    background-color:#ECECEC;
+}
+
+
+.test-g {
+    background-color: #01a982;
+    border: 1px solid white;
+}
+.profile-left{
+	/*position: fixed;*/
+	padding: 10;
+	/*width: 13%;*/
+}
+.profile-left button{
+	margin:0;
+	text-align: left
+}
+.profile-md-card{
+    min-height: 75%;
+    background-color: white;
+}
+h2{
+	margin:0;
+}
+
+.active-tab{
+	/*background-color: rgba(158,158,158,0.2);
+    border: 0.5px solid rgba(0,0,0,0.1);*/
+	border: 0.5px solid rgba(0,0,0,0.1);
+    color: rgb(26, 188, 156);
+    background-color: rgba(225,225,225,0.3);
+}
+
+.img-circle{
+	height: 70%;
+    width: 70%;
+    margin: 3px; 	
+    border-radius: 50%;
+    object-fit: cover;
+}
+.badge{
+	background-color: #01a982;
+    color: white;
+    font-size: 0.5em;
+    border-radius: 10%;
+    padding: 1px 5px;
+    display: inline-table;
+	margin-right: 2px;
+}
+.badge.notif{
+	height: 1;
+    line-height: 1;
+    font-size: 0.9em;
+    padding: 4px 4px;
+}
+.badge.notif.red{
+    background-color: indianred;
+}
+.badge.card{
+    height: 0.8;
+    width: 12px;
+    text-align: center;
+    line-height: 0.8;
+    font-size: 0.8em;
+    padding: 3px 3px;
+}
+.badge.card.gray{
+    background-color: transparent;
+    border: 1px solid gray;
+    color:gray;
+}
+.subhead{
+	font-size: 0.9em;
+    color: gray;
+}
+.md-title{
+	text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+}
+.product-grid  md-card>div>img, .product-grid md-card>img, .product-grid md-card>md-card-header img{
+	width: 28px;
+    height:28px; 
+	overflow: hidden;
+    object-fit: cover;
+}
+.product-grid md-card md-card-title{	
+	padding: 2%;
+}
+.product-grid md-card-title>div>span{
+	line-height: 1em;
+}
+.product-grid md-grid-tile   md-card {
+    background-color: white;
+	width: 214px;
+	box-shadow: 0 1px 0.1px 0 rgba(0,0,0,.2), 
+				0 0.3px 0.3px 0 rgba(0,0,0,.14), 
+				0 0.1px 0.1px -1px rgba(0,0,0,.12)
+}
+.store-grid md-card{
+	height: 100px;
+	/*width: 	320px;*/
+}
+
+.green-button{
+    background-color: rgb(26, 188, 156);
+    border: 0;
+    color: whitesmoke;
+    line-height: normal
+}
+.green-button:hover{
+    color: rgb(26, 188, 156);
+    border: 1px solid rgb(26, 188, 156);
+}
+.action-button[disabled]{
+    color: rgba(0,0,0,0.6);
+}
+.action-button{
+    border:1px solid gray; 
+    color:black;
+    line-height: normal
+}
+
+.action-buttonn.md-default-theme:not([disabled]):hover, .action-button:not([disabled]):hover {
+    background-color: rgba(26, 188, 156 ,0.7);
+    border: 0;
+    color: whitesmoke
+}
+/*MATERIAL OVERRIDE*/
+md-progress-circular svg path { stroke: rgb(26, 188, 156); }
+md-tabs .md-tab.md-active{
+	color: rgb(26, 188, 156);
+}
+ md-tabs md-ink-bar {
+    color: rgb(26, 188, 156);
+    background: rgb(26, 188, 156);
+}
+md-content{
+	background-color: white;
+    /*min-height: 75%;*/
+}
+
+md-input-container{
+    margin: 8 0 0 0;
+}
+
+md-card-header{
+	padding: 0 !important;
+}
+md-card{
+	border-radius: 5px;
+}
+.md-button{
+    font-size: 0.8em;
+}
+
+/* FOR DIALOGS */
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+    background-color: rgb(48,48,48);
+    color: black;
+}
+
+md-content.md-default-theme, md-content, md-dialog md-dialog-content, md-dialog .md-actions, md-dialog md-dialog-actions, md-dialog, md-tabs .md-tab {
+    background-color: white;
+    color: rgb(48,48,48);
+}
+md-tabs[md-border-bottom] md-tabs-wrapper{
+        border-bottom-color: rgba(10,10,10,0.2);
+}

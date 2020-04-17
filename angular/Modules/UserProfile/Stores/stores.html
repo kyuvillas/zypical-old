@@ -1,0 +1,39 @@
+<md-content class="md-padding" layout="column" flex>
+    <div layout flex="5" layout-align="center center"><span class="md-title" >your stores</span></div>
+    <div flex="10" layout layout-align="end center">
+        <md-button class="action-button" style="padding: 0 12px;font-size:1em">
+        <i class="fa fa-plus" style="margin-right 3px:font-size:0.9em !important"></i>
+        create store
+        </md-button>
+    </div>
+    <md-grid-list flex class="store-grid" md-cols="3" md-row-height="2:1" md-gutter="1%" >
+    <md-grid-tile  ng-repeat="p in managedstores" >
+      <md-card layout="row" flex layout-align="start stretch">
+          	<md-card-avatar layout="row" flex="40" layout-align="center center"> 
+            	<img ng-src="{{p.storepic}}" style="height:   60;width:  60;"  class="img-circle" />
+          	</md-card-avatar>
+          	<md-card-header-text layout="column" layout-align="center stretch" flex  style="padding: 17px 10 17 0; ">
+              	<b  layout="column" layout-align="center center">{{p.storename}}</b>
+
+              	<div layout layout-align="space-between stretch" style="color: gray; margin-top: 2px;font-size: 0.9em;">
+	                <div>
+		                <i class="fa fa-wechat" style="margin-right:3px"></i>
+		                <span ng-if="p.messages>0">Messages</span>
+	            		<span ng-if="p.messages==0"  >No messages</span>
+	                </div>
+	            	<span ng-if="p.messages>0" class="badge card gray">{{p.messages}}</span>
+	            </div>
+	            <div layout layout-align="space-between stretch"  style="color: gray; margin-top: 2px;font-size: 0.9em;">
+	                <div>
+		                <i class="fa fa-bell-o" style="margin-right:3px"></i>
+		                <span ng-if="p.notifications > 0 ">Notifications</span>
+	            		<span ng-if="p.notifications == 0 "  >No notifications</span>
+	                </div>
+	            	<span ng-show="p.notifications > 0 " class="badge card gray">{{p.notifications}}</span>
+	            </div>
+
+          </md-card-header-text>
+      </md-card>
+    </md-grid-tile>
+</md-grid-list>
+</md-content>

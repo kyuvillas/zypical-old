@@ -1,0 +1,81 @@
+<div flex layout="row" layout-align="start stretch" ng-controller="StoreProfileController as s"  >
+	<div flex ></div>
+	<div flex="60"  layout="column" layout-align="start stretch">
+
+		<div flex="30" layout="row" layout-align="start stretch">
+			<div flex="10"></div>
+			<div flex="30"   layout layout-align="center center">
+				<img class="img-circle" style="height:150;width: 150" ng-src="{{shop.storepic}}">
+			</div>
+			<div flex  layout="column" layout-padding>
+				<div flex="10" layout>
+					<p style="font-size: 1.5em;  margin: 0;">{{shop.storefullname}}</p> 
+					<p class="subhead" style="margin: 7px;">@{{shop.storename}}</p>
+				</div>
+				<div  layout  flex="10" class="followers">
+					<div layout="column" flex layout-align="center center">
+						<b>50</b> 
+						<span class="subhead">saves</span>
+					</div >					
+					<div layout="column" flex layout-align="center center">
+						<b>50</b>
+						<span class="subhead">products</span>
+					</div>
+
+				</div>
+				<div  flex>
+					<span>
+						Handy and Affordable Gadget Organizers
+					</span>
+				</div>
+				<div flex="10" layout="row" >
+                    <span style="font-size: 0.9em;" ng-repeat="d in shop.delivery" class="badge">{{d}}</span>
+                </div>
+			</div>			
+			<div flex="10"></div>
+			<div flex="20"  layout="column" layout-padding class="social-button">
+				<md-button flex="5" class="action-button">facebook</md-button>
+				<md-button flex="5" class="action-button">Instagram</md-button>
+				<md-button flex="5" class="green-button">save store</md-button>
+				<div flex></div>
+			</div>			
+		</div>
+		<div flex  >
+			<md-grid-list class="product-grid" md-cols-gt-sm="4" md-cols-sm="2"  md-cols-xs="1" md-row-height-gt-sm="1:1" md-row-height-sm="2:3" md-gutter="1%" >
+    			<md-grid-tile  ng-repeat="p in savedproducts" ng-mouseover="hoverEdit = true" ng-mouseleave="hoverEdit = false">
+    				<img flex ng-src="{{p.productpic}}" class="storeproduct"/>
+    				<a class="hoverdiv blacklink" href="" ng-click="showProduct($event,p)" layout layout-align="center center" ng-show="hoverEdit == true" >
+    					<b>P{{p.price}}</b>
+    				</a>
+    			</md-grid-tile>
+			</md-grid-list>
+		</div>
+	</div>
+	<div flex ></div>
+</div>
+<style>
+	.social-button md-button{
+		height
+	}
+	.storeproduct{
+		overflow: hidden;
+	    height: inherit;
+	    width: 100%;
+	    object-fit: cover;
+		border: 1px solid rgba(0,0,0,0.01);
+	}
+	.hoverdiv{
+		height: inherit;
+	    background-color: rgba(0,0,0,0.3);
+	    position: absolute;
+	    width: 100%;
+	    color: whitesmoke;
+	    z-index: 1;
+	}
+	.hoverdiv b{
+		font-size: 1.4em;
+	}
+	.followers b{
+		font-size:1.3em
+	}
+</style>

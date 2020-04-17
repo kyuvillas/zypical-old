@@ -1,0 +1,22 @@
+<md-grid-list flex class="store-grid" md-cols="3" md-row-height="2:1" md-gutter="1%" >
+    <md-grid-tile  ng-repeat="p in stores" >
+      <md-card layout="row" flex layout-align="start stretch">
+          <md-card-avatar layout="row" flex="40" layout-align="center center"> 
+            <img ng-src="{{p.storepic}}" style="height:   60;width:  60;"  class="img-circle" />
+          </md-card-avatar>
+          <md-card-header-text layout="column" layout-align="center stretch" flex  style="padding: 17px 10 17 0">
+              <b  layout="column" layout-align="center center">{{p.storename}}</b>
+            <div layout="row" flex layout-align="start center">
+                <div flex  layout="column" layout-align="center center">
+                  <b style="font-size: 1.4em;">{{p.saves}}</b>
+                  <span>saves</span>
+                </div>
+                <div flex  layout="column" layout-align="center center">
+                  <b style="font-size: 1.4em;">{{p.products}}</b>
+                  <span>products</span>
+                </div>
+              </div>
+          </md-card-header-text>
+      </md-card>
+    </md-grid-tile>
+</md-grid-list>

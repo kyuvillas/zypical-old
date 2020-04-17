@@ -1,0 +1,71 @@
+
+<div flex layout="column" layout-padding layout-margin layout-align="center center">
+	<span class="md-title">your information</span>
+	<div flex="20" layout="column" layout-align="center center"><img style="height: 80 !important; width: 80;" class="img-circle" src="assets/images/placeholders/me.jpg"/></div>
+	<a href="" style="margin:0; padding:0">Choose picture</a>
+	<table class="minimalist">
+		<thead>
+			<tr>
+				<td colspan="4" style="text-align: right;"><a href="" ng-click="edit()">edit</a></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Name</td>
+				<th colspan="3">Queenie Villasin</th>
+				<!-- <th colspan="3"><input type="text" class="edit"/></th> -->
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<th colspan="3">Female</th>
+			</tr>
+			<tr>
+				<td>Birthday</td>
+				<th colspan="3">May 21, 1996</th>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<th colspan="3">@kyuvillas</th>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<th colspan="3">****</th>
+			</tr>
+			<tr>
+				<td>Email address</td>
+				<th colspan="3">q.villasin@gmail.com</th>
+			</tr>
+		</tbody>
+	</table>
+	<div layout="row" style="width: 60%; margin-top:8; padding:0" layout-align="end center">
+		<md-button class="action-button" >save</md-button>
+	</div>
+</div>
+
+
+<style>
+	.edit{
+		transition:.1s ease-in-out;
+		display:none;
+	}
+	table{
+		width: 60%;
+  		border-collapse: collapse;
+	}
+	td{
+		width: 40%;
+		text-align: right;
+		color: gray
+	}
+	th{
+		width: 60%;
+		text-align: left
+	}
+	th,td{
+	    padding: 10px;
+	    font-size: 0.9em;
+	}
+	tr{		
+		border-bottom: 0.5px solid rgba(0,0,0,0.05);
+	}
+</style>

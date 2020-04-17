@@ -1,0 +1,158 @@
+<style>
+    .home-panel{
+        background-image: url(/zypical/assets/images/bazaar2.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;  
+        background-attachment: fixed;
+        overflow-y:auto;
+    }
+    
+    .home-panel b{
+        color:whitesmoke;
+        font-size:120px;
+    }
+    
+    @-webkit-keyframes fadeIn{
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    
+    @keyframes fadeIn{
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    
+    .welcomeMessage{
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        position: absolute;
+        top:40%;
+    }
+    
+    .welcomeMoveUp{
+        top: 10;
+        transition: top 1s;
+    }
+    
+    .fade{
+        opacity: 0;
+        transition: 1s;
+    }
+    
+    .bazaarArea{
+        margin-top:100%;
+    }
+    
+    .bazaarAreaActive{
+        margin-top:0;
+        transition: 2s;
+    }
+
+    .bazaarItem:hover{
+        background-color: lightgrey;
+    }
+    
+/*    overriding angular material css (-7% margintop)*/
+    md-card md-card-title md-card-title-text .md-subhead{
+        margin-top: 0;
+    }
+    
+</style>
+
+<div flex ng-controller="BazaarController as b" class="home-panel">
+<!--    IF FIRST TIME, ACTIVATE WELCOME ANIMATION-->
+     <div layout layout-align="center start"> 
+    <!-- <div> -->
+        <b class="welcomeMessage">Welcome to the Bazaar</b>
+        <div class="bazaarArea" flex layout="column" layout-align="center stretch">
+            <div layout flex="60" layout-align="space-around">
+                <md-card class="bazaarItem" flex="95">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{b.bazaarStores[0].storename}}</span>
+                            <span class="md-subhead">Brief description of the store is shown here...</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-lg card-media">
+                                <img ng-src="{{b.bazaarStores[0].storepic}}" class="md-card-image" alt="Store">
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                </md-card>
+            </div>
+            <div layout flex="50" layout-align="space-around">
+                <md-card class="bazaarItem" flex="50">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{b.bazaarStores[1].storename}}</span>
+                            <span class="md-subhead">Brief description of the store is shown here...</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-lg card-media">
+                                <img ng-src="{{b.bazaarStores[1].storepic}}" class="md-card-image" alt="Store2">
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                </md-card>
+                
+                <md-card class="bazaarItem" flex="40">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{b.bazaarStores[2].storename}}</span>
+                            <span class="md-subhead">Brief description of the store is shown here...</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-lg card-media">
+                                <img ng-src="{{b.bazaarStores[2].storepic}}" class="md-card-image" alt="Store3">
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                </md-card>
+            </div>
+            <div layout flex="40" layout-align="space-around">
+                <md-card class="bazaarItem" flex="30">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{b.bazaarStores[2].storename}}</span>
+                            <span class="md-subhead">Brief description of the store is shown here...</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-lg card-media">
+                                <img ng-src="{{b.bazaarStores[2].storepic}}" class="md-card-image" alt="Store2">
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                </md-card>
+                <md-card class="bazaarItem" flex="30">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{b.bazaarStores[3].storename}}</span>
+                            <span class="md-subhead">Brief description of the store is shown here...</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-lg card-media">
+                                <img ng-src="{{b.bazaarStores[3].storepic}}" class="md-card-image" alt="Store2">
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                </md-card>
+                <md-card class="bazaarItem" flex="30" style="height:250px;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{b.bazaarStores[4].storename}}</span>
+                            <span class="md-subhead">Brief description of the store is shown here...</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-lg card-media">
+                                <img ng-src="{{b.bazaarStores[4].storepic}}" class="md-card-image" alt="Store2">
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                </md-card>
+            </div>
+                
+        </div> 
+    </div>
+</div>

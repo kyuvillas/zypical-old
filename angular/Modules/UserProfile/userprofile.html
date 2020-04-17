@@ -1,0 +1,48 @@
+<div flex layout="row"  layout-align="start stretch" ng-controller="UserProfileController as u"  >
+    <div flex="10" ></div>
+    <div flex layout="row" layout-align="start stretch" style="padding-top: 1%">
+        <div flex layout="column" layout-align="start stretch" hide-xs hide-sm>
+            <div layout="column" class="profile-left" layout-align="start stretch" flex >
+                <!-- <square-img flex  img="user.pic"></square-img> -->
+                <div layout layout-align="center center"><img ng-src="{{u.user.pic}}" class="img-circle" style="height: 130; width:130;"></div>
+                <div style="margin:15px  0">
+                    <h2 style="font-size: 1.2em;">{{u.user.name}}</h2>
+                    <p class="subhead" style="    margin: 0;font-size: 1em;">@{{u.user.username}}</p>
+                </div>
+
+                <md-button  ng-class="{'active-tab': u.active =='saves'}" ng-click="u.ChangeTab('saves')" >
+                    <i class="fa fa-bookmark" style="margin-right:3px"></i>
+                    What You Saved
+                </md-button>
+                <md-button ng-class="{'active-tab': u.active =='stores'}" ng-click="u.ChangeTab('stores')" layout="row" layout-align="space-between center">
+                    <div>
+                        <i class="fa fa-shopping-bag" style="margin-right:3px"></i>
+                        Stores You manage
+                    </div>
+                    <span  class="badge notif">3</span>
+                </md-button>
+                <md-button ng-class="{'active-tab': u.active =='messages'}" ng-click="u.ChangeTab('messages')" layout="row" layout-align="space-between center">
+                    <div>
+                        <i class="fa fa-wechat" style="margin-right:3px"></i>
+                        Messages 
+                    </div>
+                    <span  class="badge notif red">3</span>
+                </md-button>
+                <md-button ng-class="{'active-tab': u.active =='personal'}" ng-click="u.ChangeTab('personal')"  >
+                    <i class="fa  fa-info-circle" style="margin-right:3px"></i>
+                    Personal Information
+                </md-button>
+            </div>
+
+        </div>
+        <div flex-gt-sm="70" flex-sm flex-xs>
+            <md-card md-theme-watch="" class="profile-md-card" >
+                <div ui-view flex layout></div>
+            </md-card>
+        </div>
+        <div flex="10" hide-xs hide-sm >
+                <!-- RESERVED SPACE  -->
+        </div>
+    </div>
+    <div flex="10" ></div>
+</div>

@@ -1,0 +1,14 @@
+<div ng-controller="SavesController as s" flex>
+    <md-tabs md-dynamic-height md-border-bottom md-selected="selectedTab" md-stretch-tabs="always"  >
+        <md-tab label="Saved Products" flex>
+            <md-content class="md-padding"  >
+                <product-grid products="s.savedproducts" column="4" ratiowidth="3" ratioheight="4"></product-grid>
+            </md-content>
+        </md-tab>
+        <md-tab label="Saved Shops">
+            <md-content class="md-padding">
+                <store-grid stores="s.savedstores"></store-grid>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</div>

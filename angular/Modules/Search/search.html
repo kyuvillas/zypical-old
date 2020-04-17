@@ -1,0 +1,186 @@
+<div  flex layout layout-align="start stretch" ng-controller="SearchController as s">
+	<!-- <div flex="15" ></div> -->
+	<div flex layout="column" layout-padding layout-margin layout-align="start stretch">
+		<div flex="5" layout="column" layout="center center" >
+			<p >5 Products found for keyword "{{s.keyword}}"</p>
+		</div>
+		<div flex="5" layout >
+			<md-input-container style="    width: 15%;">
+                <label>sort by</label>
+                <md-select ng-model="filter">
+                    <md-option>Recent to Oldest</md-option>
+                    <md-option>Oldest to Recent</md-option>
+                    <md-option>Cheapest first</md-option>
+                    <md-option>Most expensive first</md-option>
+                    <md-option>Most popular first</md-option>
+                </md-select>
+            </md-input-container>
+		</div>
+		<div flex style="margin-top:10px" >
+			<product-grid products="savedproducts" column="6" ratiowidth="3" ratioheight="4"></product-grid>
+		</div>
+	</div>
+	<div flex="15" class="filter-container" layout="column">
+		<div flex="5" ><p class="md-title"  style="color: gray; text-align: center">filters</p></div>
+		<div flex style="">
+		    <div class="tab">
+		      <input id="tab-one" type="checkbox" checked name="tabs">
+		      <label for="tab-one">PRICE : P{{s.sliderExample9[0]}}-P{{s.sliderExample9[1]}}</label>
+		      <div class="tab-content" id="price-range" layout>
+		            <p flex="15">P100</p>
+                    <div flex><div style="margin: 0.4em 0.8em 0 0.2em;" ui-slider="{range: true}" min="100" step="25" max="500" ng-model="s.sliderExample9"></div></div>
+		            <p flex="20">P500</p>
+		      </div>
+		    </div>
+		    <div class="tab">
+				<input id="tab-two" type="checkbox" checked name="tabs">
+				<label for="tab-two">TAGS (4) : All Selected</label>
+				<div class="tab-content" layout="column">
+				<md-checkbox selected ng-repeat="t in s.tags">
+				   {{ t }}
+				</md-checkbox>
+				</div>
+		    </div>
+		    <div class="tab">
+		      <input id="tab-three" type="checkbox" checked name="tabs">
+		      <label for="tab-three">DELIVERY METHOD (3) : ALL</label>
+		      <div class="tab-content" layout="column">
+		        <md-checkbox selected ng-repeat="t in s.delivery">
+				   {{ t }}
+				</md-checkbox>
+		      </div>
+		    </div>
+		    <div class="tab">
+		      <input id="tab-four" type="checkbox" checked name="tabs">
+		      <label for="tab-four">LOCATION (3) : ALL</label>
+		      <div class="tab-content" layout="column">
+		        <md-checkbox selected ng-repeat="t in s.location">
+				   {{ t }}
+				</md-checkbox>
+		      </div>
+		    </div>
+		    <md-button class="green-button" style="width:92%;">search</md-button>
+		</div>
+	</div>
+</div>
+<style>
+	.filter-container{
+		border-left: 1px solid rgb(208,206,206);
+		background-color: rgb(242,242,242);
+
+	}
+	/* Acordeon styles */
+	.tab {
+	  position: relative;
+	  margin-bottom: 1px;
+	  width: 100%;
+	  color: gray;
+	  overflow: hidden;
+	  font-size: 0.9em;
+	}
+	input {
+	  position: absolute;
+	  opacity: 0;
+	  z-index: -1;
+	}
+	label {
+	  position: relative;
+	  display: block;
+	  padding: 0 0 0 1.5em;
+	  /*background: #16a085;*/
+	  line-height: 3;
+	  cursor: pointer;
+	}
+	label:hover {
+	    background-color: #ddd; 
+	}
+	.blue label {
+	  background: #2980b9;
+	}
+	.tab-content {
+		padding: 0 1em 0 2em;
+		max-height: 0;
+		overflow: hidden;
+		-webkit-transition: max-height .35s;
+		-o-transition: max-height .35s;
+		transition: max-height .35s;
+		font-size: 0.8em;
+	}
+	.tab-content p {
+	 margin: 0 
+	}
+	/* :checked */
+	input:checked ~ .tab-content {
+	  max-height: 10em;
+	}
+	/* Icon */
+	label::after {
+	  position: absolute;
+	  left: -10;
+	  top: 0;
+	  display: block;
+	  width: 3em;
+	  height: 3em;
+	  line-height: 3;
+	  text-align: center;
+	  -webkit-transition: all .35s;
+	  -o-transition: all .35s;
+	  transition: all .35s;
+	}
+	input[type=checkbox] + label::after {
+	  content: "\003e";
+	}
+	input[type=radio] + label::after {
+	  content: "\3eBC";
+	}
+	input[type=checkbox]:checked + label::after {
+	  transform: rotate(450deg);
+	}
+	#price-range{		
+		padding: 0 1em 0 1em;
+	}
+	.ui-widget-header{
+		background: none;
+		background-color: #01a982;
+	}
+	.ui-slider-horizontal {
+	    height: .2em;
+	}
+	.ui-state-default, .ui-widget-content .ui-state-default{
+		top: -10;
+		z-index: 1;
+	    width: 20px;
+	    height: 20px;
+	    border-radius: 20px;
+	    -webkit-transform: scale(.7);
+	    transform: scale(.7);
+	    border: 1px solid white;
+	    background: #01a982;	
+	    }
+	    md-slider *, md-slider :after {
+	    box-sizing: border-box;
+	}
+	md-checkbox .md-container,md-checkbox .md-icon{
+		width: 15px;
+    	height: 15px;
+    }
+    md-checkbox .md-label{
+    	margin-left: 20px
+    }
+    md-checkbox{
+    	margin: 0
+    }
+    md-checkbox .md-icon {
+    	border: 1px solid #01a982; 
+    background: white;
+}
+md-checkbox.md-default-theme.md-checked .md-icon,md-checkbox.md-checked .md-icon {
+    background: #01a982;
+    	border: 1px solid #01a982; 
+    	color: white;
+}
+md-checkbox.md-checked .md-icon:after,md-checkbox .md-container:after{
+	width: 4.66667px;
+    height: 10.33333px;
+}
+</style>

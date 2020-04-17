@@ -1,0 +1,111 @@
+md-input-container:not(.md-input-invalid).md-input-focused .md-input, md-input-container:not(.md-input-invalid).md-input-focused label{
+	border-color: #1d1d1d; 
+	color: #1d1d1d;
+}
+md-input-container:not(.md-input-has-value) input:not(:focus), md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-ampm-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-day-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-hour-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-millisecond-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-minute-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-month-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-second-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-text, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-week-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-year-field{
+	color:#1d1d1d !important;
+}
+md-select.md-default-theme:not([disabled]):focus ._md-select-value,md-select:not([disabled]):focus ._md-select-value, md-select:not([disabled]):focus ._md-select-value{
+	color: #1d1d1d;
+    border-bottom-color: rgba(0, 0, 0, 0.117647);
+}
+md-input-container.md-default-theme .md-input, md-input-container .md-input{
+	border-color: rgba(0,0,0,0.12);
+    border-top-color: rgba(0, 0, 0, 0.117647);
+    border-right-color: rgba(0, 0, 0, 0.117647);
+    border-bottom-color: rgba(0, 0, 0, 0.117647);
+    border-left-color: rgba(0, 0, 0, 0.117647);
+}
+md-input-container label,md-input-container.md-default-theme:not(.md-input-invalid).md-input-has-value label, md-input-container:not(.md-input-invalid).md-input-has-value label {
+	color: #1d1d1d
+}
+md-input-container .md-input{
+	color: #1d1d1d;
+}
+md-input-container{
+	/*margin: 8 0 0 0;*/
+}
+md-input-container.md-default-theme label, md-input-container label, md-input-container.md-default-theme ._md-placeholder, md-input-container ._md-placeholder{
+	color: rgba(0,0,0,0.5);
+}
+md-select ._md-select-value{
+	border-bottom-color: rgba(0,0,0,0.12);
+}
+md-select.md-default-theme ._md-select-value._md-select-placeholder, md-select ._md-select-value._md-select-placeholder{
+	color: rgba(0,0,0,0.5);
+}
+md-input-container>md-select {
+    margin: 8 0 0 0;
+}
+.md-button[disabled]{
+	color: rgba(0,0,0,0.6);
+}
+.md-button{
+	border: 1px solid black;
+}
+.md-button.md-default-theme:not([disabled]):hover, .md-button:not([disabled]):hover {
+    background-color: rgba(26, 188, 156 ,0.7);
+    border: 0;
+    color: whitesmoke
+}
+
+md-content.md-default-theme, md-content,md-dialog md-dialog-content,md-dialog .md-actions, md-dialog md-dialog-actions, md-dialog,md-tabs .md-tab{
+	background-color: whitesmoke;
+	color:rgb(48,48,48);
+}
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar){
+	background-color: rgb(48,48,48);
+	color:black;
+}
+md-dialog{
+    min-width: 30%;
+}
+
+md-grid-tile{
+	/*box-shadow: 2px 2px 2px #888888;*/
+}
+md-grid-list md-grid-tile md-grid-tile-footer, md-grid-list md-grid-tile md-grid-tile-header{
+	background: rgba(255,255,255,.7);
+	height: 30%;
+	color: black;
+	padding: 2%;
+}
+
+md-card{
+	background-color: white;
+	padding:3%;
+	padding: 0;position: relative;
+    height: inherit;
+    width: 100%;
+}
+md-icon{
+    color:#1d1d1d;
+}
+.md-headline {
+    font-size: 103% !important;
+    font-weight: 400;
+    line-height: 1 !important;
+}
+.md-subhead{
+	padding-top: 7px !important;
+    margin-top: -5% !important;
+    font-size: 100% !important;
+    opacity: 0.5;
+
+}
+md-card-header{
+	padding: 3px !important;
+}
+md-card-title{
+	height: 30% !important; 
+	padding:5px !important;
+}
+md-divider{
+	border-top-color: rgba(0,0,0,0.1);
+}
+md-input-container.md-default-theme > md-icon, md-input-container > md-icon {
+    color: #1d1d1d;
+}
+md-list-item.md-3-line .md-list-item-text, md-list-item.md-3-line > ._md-no-style .md-list-item-text{
+	margin: 0 !important;
+}

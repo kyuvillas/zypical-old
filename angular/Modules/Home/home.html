@@ -1,0 +1,139 @@
+<style>
+    .home-panel{
+        min-height: 100%;
+    }
+    #popularStoresArea{
+        background-color: #DBD5D5;
+        padding:15px;
+    }
+    
+    #popularStoresArea h1{
+        margin-left:10px;
+    }
+    
+    #popularProductsArea h1{
+        margin-left: 10px;
+        padding: 15px;
+    }
+    
+    #aboutUsArea{
+        background-color:dimgray;
+        color:whitesmoke;
+        min-height:40%;
+    }
+    
+    #aboutUsArea a{
+        color:white;
+    }
+    
+    .scrollArea{
+        position:fixed;
+        right:20px;
+        top:50%;
+        z-index:1000;
+    }
+    
+</style>
+
+
+<div flex layout="column" ng-controller="HomeController as h">
+    <div class="scrollArea">
+        <center>
+            <div class="circleIndicator" href="#upperMostArea" du-scrollspy ng-click="h.goToArea('upperPanel')"></div>
+            <div class="circleIndicator" href="#popularProductsArea" du-scrollspy ng-click="h.goToArea('popularProductsArea')"></div>
+            <div class="circleIndicator" href="#popularStoresArea" du-scrollspy ng-click="h.goToArea('popularStoresArea')"></div>
+            <div class="circleIndicator" du-scrollspy ng-click="h.goToArea('aboutUsArea')"></div>
+        </center>
+    </div>
+    <div class="home-panel" id="upperMostArea" layout="column">
+        <div id="upperPanel" flex="60" layout>
+            
+            <div flex="25"></div>
+            <div flex="50" layout="column" layout-align="end stretch">
+                <div layout="column" layout-align="center center">
+                    <img src="/zypical/assets/images/zypical-logo-white.png" width="550">
+                    <p style="font-size:30px; margin-top:-60px; font-family:'calibri light'; color:white; margin-bottom:5px;">
+                        Find the best products and your favorite online stores
+                    </p>
+                </div>
+
+                <div layout layout-gt-sm="row">
+                    <md-input-container class="md-block">
+                        <label>Filter</label>
+                        <md-select ng-model="h.filter">
+                            <md-option ng-repeat="f in h.filterOptions" ng-value="f">{{f}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Search</label>
+                        <input>
+                    </md-input-container>
+                    <md-button class="md-icon-button md-primary" aria-label="Search"  ng-click="h.ChangeState('search')" style="margin-top:10px;">
+                        <md-icon md-svg-icon="/zypical/assets/icons/ic_search_white_24px.svg"></md-icon>
+                    </md-button>
+                </div>
+            </div>
+            <div flex="20" layout layout-align="end start">
+                <md-button class="md-raised" ng-click="h.showSignupDialog($event)">SIGN UP</md-button>
+                <md-button class="md-raised" ng-click="h.showLogInDialog($event)">LOG IN</md-button>
+            </div>
+            <div flex="5"></div>
+        </div>
+
+        <div flex="40" layout>
+            <div flex="35" layout="column" layout-align="center center">
+                <div flex="5"></div>
+                <div id="popProducts" flex="90" layout layout-align="center end" ng-click="h.goToArea('popularProductsArea')">
+                    <h2>POPULAR PRODUCTS</h2>
+                </div>
+                <div flex="5"></div>
+            </div>
+            <div flex="35" layout="column" layout-align="center center">
+                <div flex="5"></div>
+                <div id="popStores" flex="90" layout layout-align="center end" ng-click="h.goToArea('popularStoresArea')">
+                    <h2>POPULAR STORES</h2>
+                </div>
+                <div flex="5"></div>
+            </div>
+            <div flex="30" layout="column" layout-align="center center">
+                <div flex="5"></div>
+                <div id="bazaar" flex="90" layout layout-align="center end" ng-click="h.ChangeState('bazaar')">
+                    <h2>BAZAAR</h2>
+                </div>
+                <div flex="5"></div>
+            </div>
+        </div>
+    </div>
+    <div id="popularProductsArea" class="home-panel" ng-cloak>
+        <h1>POPULAR PRODUCTS</h1>
+        <product-grid products="h.topStores" column="6" ratiowidth="1" ratioheight="1" ng-cloak></product-grid>
+    </div>
+    
+    <div id="popularStoresArea" class="home-panel" ng-cloak>
+        <h1>POPULAR STORES</h1>
+        <product-grid products="h.topStores" column="6" ratiowidth="1" ratioheight="1" ng-cloak></product-grid>
+    </div>
+    
+    <div id="aboutUsArea" layout layout-align="space around" class="home-panel">
+        <div flex="30" layout layout-align="center center">
+            <div layout="column">
+                <a href="#">About us</a>
+                <a href="#">Contact us</a>
+                <a href="#">Careers</a>
+                <a href="#">Partnerships</a>
+                <a href="#">Follow us:</a>
+            </div>
+        </div>
+        
+        <div flex="40" layout layout-align="center center">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        
+        <div flex="30" layout layout-align="center center">
+            <h3>We are Zypical</h3>
+        </div>
+    </div>
+
+</div>
+
+
